@@ -1,0 +1,25 @@
+{
+  "name": "shoptrack-api",
+  "version": "1.0.0",
+  "description": "Shoptrack API - Express + MySQL on Render with Aiven",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "db:schema": "node --env-file=.env src/db/run-schema.js",
+    "db:seed": "node --env-file=.env src/db/run-seed.js",
+    "db:reset": "npm run db:schema && npm run db:seed"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [],
+  "author": "Drew Ogryzek",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mysql2": "^3.23.2"
+  }
+}
